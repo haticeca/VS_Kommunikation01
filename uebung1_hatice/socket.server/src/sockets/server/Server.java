@@ -32,11 +32,11 @@ public class Server {
 				String anClient = null;
 			
 				while((vomClient= r.readLine()) != null) { //vomCLien == r.readLline()
-					anClient = protocol.process("+ 2 3");
+					anClient = protocol.process(vomClient);  
 //					output.print(anClient);
 //					output.flush();
 					if(anClient == null) {
-						System.out.println("Server: Server Command sagt null. Kein Command! ");
+						System.out.println("Server: Unbekannte Eingabe! ");
 					}
 					
 				} System.out.println("Server: Server antwort: " +  anClient);	
