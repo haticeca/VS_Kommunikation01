@@ -31,7 +31,7 @@ public class Server {
 				String vomClient = null;
 				String anClient = null;
 			
-				while((vomClient= r.readLine()) != null) { //vomCLien == r.readLline()
+				while((vomClient= r.readLine()) != null) { 
 					anClient = protocol.process(vomClient);  
 //					output.print(anClient);
 //					output.flush();
