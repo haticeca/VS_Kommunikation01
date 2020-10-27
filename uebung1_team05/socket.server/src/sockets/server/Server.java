@@ -2,9 +2,9 @@
  * Team 5
  * 
  * Das Programm läuft leider nicht einwandfrei.. 
- * die Commands werden nicht durchläuft.. die Methoden process(msg)
- * process(args[]) habe ich getestet die müssten an sich funktionieren..
- * 
+ * die Commands werden durchläuft, das haben wir auf unsere Art und Weise getestet. Also Methoden process(msg)
+ * process(args[]) müssten an sich funktionieren..
+ * Bei Eingabe wird die Erste eingabe hier + 5 6 geschickt und wenn Server gestoppt wird erst zurückgegeben. leider werden die Eingaben nicht hintereinander bearbeitet. Der Fehler liegt wahrscheinlich im Server aber wir konnten es auch nach langer Suche nicht finden.
  * */
 
 package sockets.server;
@@ -46,13 +46,13 @@ public class Server {
 					
 					
 					if(anClient == null) {
-						System.out.println("Server: Server Command sagt null. Kein Command! ");
+						anClient = "unbekannt";
 					}
 					System.out.println("Server: Server antwort: " +  anClient);	
 					output.print(anClient);
 				} 
 				clientSocket.close();
-				
+				serverSocket.close();
 				
 				
 			} 
