@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Client {
 	
@@ -19,13 +20,18 @@ public class Client {
 
 		BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+		System.out.println("bitte Eingabe");
+		@SuppressWarnings("resource")
+		Scanner s = new Scanner(System.in);
 
-		String[] msg = { "hello", "- 9 4", "* 5 3" };
-		for (int i = 0; i < msg.length; i++) {
+		String msg = s.nextLine();//{ "hello", "- 9 4", "* 5 3" };
+		/*for (int i = 0; i < msg.length; i++) {
 			System.out.println("--> " + msg[i]);
 			out.println(msg[i]);
 			System.out.println("<-- " + in.readLine());
-		}
+		}*/
+		out.println(msg);
+		System.out.println("<--" + in.readLine());
 		client.close();
 	}
 
