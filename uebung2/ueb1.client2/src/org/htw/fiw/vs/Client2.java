@@ -9,11 +9,11 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client {
+public class Client2 {
 	
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
-		new Client().start();
+		new Client2().start();
 	}
 
 	public void start() throws IOException {
@@ -23,7 +23,7 @@ public class Client {
 		PrintWriter out = new PrintWriter(client.getOutputStream(), true);
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Anfrage an Server(trennen sie die Befehle mit einem Komma): ");
+		System.out.print("CLient2: Anfrage an Server(trennen sie die Befehle mit einem Komma): ");
 		String eingabe = sc.nextLine();
 		String[] msg = eingabe.split(",");
 		//String[] msg = {"hello", "+ 3 5", "* 6 8"};
